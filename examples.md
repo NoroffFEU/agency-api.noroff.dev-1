@@ -145,7 +145,7 @@ usersRouter.delete("/:id", checkIfUserIdExist, validateUserPermissions, handleDe
 
 ## Json Web Tokens
 
-For this project we are using [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) package to validate a users requests. In the `src/utilities/jsonWebToken.js` file you will 3 functions for dealing with these tokens. I go over the two important ones for what we are doing. First we have the signToken function this takes the `sign` function from the package and uses the users id and email plus a secret key `(SECRETSAUCE)` to create a unique token for the user. Currently set to expire in 24hrs.
+For this project we are using [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) package to validate a users requests. In the `src/utilities/jsonWebToken.js` file you will find 3 functions for dealing with these tokens. I go over the two important ones for what we are doing. First we have the signToken function this takes the `sign` function from the package and uses the users id and email plus a secret key `(SECRETSAUCE)` to create a unique token for the user. Currently set to expire in 24hrs.
 
 ```js
 import jsonwebtoken from "jsonwebtoken";
